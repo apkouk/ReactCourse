@@ -1,5 +1,5 @@
 import React, {PropTypes} from 'react';
-import {Link} from 'react-redux';
+import {Link} from 'react-router';
 
 const CourseListRow = ({course}) => {
   return(

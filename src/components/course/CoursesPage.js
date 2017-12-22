@@ -2,21 +2,18 @@ import React, {PropTypes} from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import * as courseActions from '../../actions/courseActions';
+import CourseList from './CourseList';
 
 class CoursesPage extends React.Component {
   constructor(props, context) {
     super(props, context);
   }
 
-  courseRow(course, index){
-    return <div key={index}>{course.title}</div>;
-  }
-
   render() {
     return(
       <div>
         <h1>Courses</h1>
-        {this.props.courses.map(this.courseRow)}
+        <CourseList courses={this.props.courses}/>
       </div>
     );
   }
@@ -24,8 +21,7 @@ class CoursesPage extends React.Component {
 
 
 CoursesPage.propTypes = {
-  course: PropTypes.object.isRequired,
-  actions: PropTypes.array.isRequired
+  courses: PropTypes.array.isRequired
 };
 
 function mapStateToProps(state, ownProps){
