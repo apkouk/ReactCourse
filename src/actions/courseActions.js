@@ -1,4 +1,4 @@
-import * as types from './courseActionTypes';
+import * as types from './actionTypes';
 import courseApi from '../api/mockCourseApi';
 
 

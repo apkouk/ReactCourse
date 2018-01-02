@@ -1,1 +1,0 @@
-export const LOAD_COURSES_SUCCESS = 'CREATE_COURSE';
